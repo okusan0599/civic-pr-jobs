@@ -50,7 +50,7 @@ def refresh_local_registry(fetcher: SafeFetcher|None=None) -> dict:
         discovered={pref for pref,_ in pages}
         if len(discovered)!=47:
             raise ValueError(f'都道府県リンクは{len(discovered)}/47件。構造変更の可能性があるため既存名簿を保持します。')
-        errors=[]; counts={}; imported=0
+        errors=[]; counts={}; imported=0; reports=[]
         for pref,url in pages:
             try:
                 response=f.get(url)
@@ -61,13 +61,16 @@ def refresh_local_registry(fetcher: SafeFetcher|None=None) -> dict:
                     store.add_source(**row)
                 counts[pref]=counts.get(pref,0)+len(rows)
                 imported+=len(rows)
+                reports.append({'prefecture':pref,'url':url,'state':'ok','imported':len(rows),'checked_at':now_iso()})
             except (FetchError,ValueError) as e:
                 errors.append({'prefecture':pref,'url':url,'error':str(e)[:250]})
+                reports.append({'prefecture':pref,'url':url,'state':'error','imported':0,'checked_at':now_iso()})
         total=len([s for s in store.sources() if s['kind'] in ('prefecture','municipality','ward')])
         complete=not errors and len([p for p,n in counts.items() if n>0])==47 and total>=1700
         result={'state':'ok' if complete else 'partial','checked_at':now_iso(),
                 'source':REGISTRY_URL,'prefectures_loaded':len([p for p,n in counts.items() if n>0]),
-                'registered_sources':total,'errors':errors,
+                'registered_sources':total,'errors':errors,'per_prefecture_imports':reports,'rows_per_prefecture':counts,
+                'missing_prefectures':[p for p in PREF_NAMES if not counts.get(p)],
                 'message':'47都道府県の自治体・行政区リンクを取得。巡回の網羅性を保証するものではありません。' if complete
                 else '全国名簿の取得が一部未完了です。既存情報を保持し、次回再試行します。'}
         store.set_setting('registry',result)

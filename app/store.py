@@ -72,6 +72,8 @@ def init_db(seed: bool=True) -> None:
         CREATE INDEX IF NOT EXISTS ix_jobs_source ON jobs(source_id);
         CREATE INDEX IF NOT EXISTS ix_changes_job ON changes(job_id, at DESC);
         ''')
+        from .audit import ensure_schema
+        ensure_schema(c)
     if seed:
         source_file = ROOT / 'data' / 'seed_sources.json'
         if source_file.exists():
@@ -123,8 +125,10 @@ def set_setting(key: str, value: Any) -> None:
 
 
 def sources() -> list[dict]:
+    from .audit import enrich_sources
     with connect() as c:
-        return [dict(r) for r in c.execute('SELECT * FROM sources ORDER BY pref,name')]
+        rows = [dict(r) for r in c.execute('SELECT * FROM sources ORDER BY pref,name')]
+    return enrich_sources(rows)
 
 
 def deadline_status(j: dict, now: datetime|None=None) -> str:
@@ -241,7 +245,8 @@ def metadata() -> dict:
                     SUM(CASE WHEN state='ok' THEN 1 ELSE 0 END) AS ok FROM sources GROUP BY pref''')]
     audit_file=ROOT/'data'/'research_audit.json'
     audit=json.loads(audit_file.read_text(encoding='utf-8')) if audit_file.exists() else {}
-    return {'research_audit':audit,'national_registry':setting('national_registry',{'state':'not_started','message':'e-Govの国の機関一覧は未更新です。初期登録の機関は未巡回です。'}),
+    from .audit import metrics as coverage_metrics
+    return {'coverage_v3':coverage_metrics(),'research_audit':audit,'national_registry':setting('national_registry',{'state':'not_started','message':'e-Govの国の機関一覧は未更新です。初期登録の機関は未巡回です。'}),
             'generated_at':now_iso(),'prefectures':PREFECTURES,'registered_sources':total,
             'visited_sources':visited,'healthy_sources':healthy,'problem_sources':problems,
             'review_count':review,'last_run':dict(last) if last else None,

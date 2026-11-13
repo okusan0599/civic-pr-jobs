@@ -1,6 +1,6 @@
 """Build an honest, offline screen preview with a fixed reference date."""
 from __future__ import annotations
-import argparse, json, sys
+import argparse, json, sys, os, re
 from pathlib import Path
 from datetime import datetime
 ROOT=Path(__file__).resolve().parents[1]
@@ -14,6 +14,11 @@ def main():
     args=parser.parse_args()
     store.init_db()
     meta=store.metadata(); meta.update(mode='published_snapshot' if args.hosted else 'snapshot',scheduler_enabled=False,daily_hour_jst=5,external_schedule='GitHub Actions 05:17 JST' if args.hosted else None)
+    repo=os.getenv('GITHUB_REPOSITORY','')
+    if re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',repo):
+        meta['github_actions_url']='https://github.com/'+repo+'/actions'
+    from app.audit import write_ci_summary
+    write_ci_summary()
     rows=store.jobs()
     payload=json.dumps({'jobs':rows,'meta':meta,'sources':store.sources()},ensure_ascii=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
     html=(ROOT/'web'/'index.html').read_text(encoding='utf-8')

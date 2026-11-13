@@ -22,7 +22,7 @@ PREFECTURES = [{'code': f'{i+1:02d}', 'name': name,
                 'region': next(r for r, ps in REGION_GROUPS.items() if name in ps)}
                for i, name in enumerate(PREF_NAMES)]
 REGION_OF = {p['name']: p['region'] for p in PREFECTURES}
-VERSION = '2.0.0'
+VERSION = '2.1.0'
 NATIONAL_LABEL = '国の機関'
 NATIONAL_REGISTRY_URL = 'https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html'
 

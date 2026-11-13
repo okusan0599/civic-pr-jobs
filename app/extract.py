@@ -42,6 +42,40 @@ def decode_html(body: bytes) -> str:
     return d.unicode_markup or body.decode('utf-8',errors='replace')
 
 
+def read_feed(body: bytes, url: str) -> dict | None:
+    """Read official RSS/Atom and XML sitemaps without requesting arbitrary URLs."""
+    import xml.etree.ElementTree as ET
+    if b'<!DOCTYPE' in body.upper() or b'<!ENTITY' in body.upper():
+        raise ValueError('XML declarations with DTD/entities require manual inspection')
+    try:
+        root=ET.fromstring(body)
+    except ET.ParseError as e:
+        raise ValueError('XML parse failure: '+str(e)) from e
+    local=lambda e:e.tag.rsplit('}',1)[-1].lower() if isinstance(e.tag,str) else ''
+    kind=local(root)
+    if kind not in ('rss','feed','urlset','sitemapindex'):
+        return None
+    links=[]
+    if kind in ('urlset','sitemapindex'):
+        for el in root.iter():
+            if local(el)=='loc' and el.text:
+                target=canonical_url(urljoin(url,el.text.strip()))
+                label='sitemap' if kind=='sitemapindex' else target
+                links.append({'url':target,'label':label})
+    else:
+        for item in root.iter():
+            if local(item) not in ('item','entry'):
+                continue
+            title=next((''.join(ch.itertext()) for ch in item if local(ch)=='title'),'')
+            for ch in item:
+                if local(ch)=='link' and ch.get('rel','alternate') in ('alternate',''):
+                    target=ch.get('href') or (ch.text or '').strip()
+                    if target:
+                        links.append({'url':canonical_url(urljoin(url,target)), 'label':normalize(title)[:250]})
+    return {'title':kind,'text':'Official discovery feed; not a recruitment notice.',
+            'links':links[:5000],'jobposting':None,'is_pdf':False,'is_feed':True}
+
+
 def read_document(body: bytes, url: str, content_type: str='') -> dict:
     if 'pdf' in content_type.lower() or body.startswith(b'%PDF'):
         from pypdf import PdfReader
@@ -54,6 +88,10 @@ def read_document(body: bytes, url: str, content_type: str='') -> dict:
         text=normalize(text)[:400000]
         title=next((l.strip() for l in text.splitlines() if HIRING.search(l) and len(l)<180),'募集要項PDF')
         return {'title':title,'text':text,'links':[],'jobposting':None,'is_pdf':True}
+    if ('xml' in content_type.lower() and 'xhtml' not in content_type.lower()) or re.search(br'<(?:rss|feed|urlset|sitemapindex)(?:\s|>)',body[:1000],re.I):
+        feed=read_feed(body,url)
+        if feed is not None:
+            return feed
     soup=BeautifulSoup(decode_html(body),'html.parser')
     jobposting=None
     for el in soup.select('script[type="application/ld+json"]'):
@@ -243,6 +281,7 @@ def link_priority(label: str,url: str) -> int:
     if url.lower().endswith('.pdf'): s+=5
     if PROCUREMENT.search(label): s-=200
     if re.search(r'合格|結果|様式|履歴書|申込書',label): s-=100
-    if re.search(r'sitemap|サイトマップ|新着情報|お知らせ一覧|組織から探す',label+' '+url): s+=8
-    if re.search(r'\.rss|\.atom|rss|feed',url): s+=12
+    if re.search(r'sitemap|サイトマップ|新着情報|お知らせ一覧|組織から探す',label+' '+url): s+=18
+    if re.search(r'\.rss|\.atom|rss|feed',url): s+=18
+    if re.search(r'(?:\u5e02|\u533a|\u753a|\u6751|\u770c|\u5e9c|\u9053|\u90fd)\u653f\u60c5\u5831|\u884c\u653f\u60c5\u5831|\u7d44\u7e54\u6848\u5185',label): s+=13
     return s
