@@ -1,0 +1,302 @@
+{
+  "date": "2026-11-13",
+  "method": "web_keyword_search",
+  "full_crawl_completed": false,
+  "live_deployed": false,
+  "scheduler_live": false,
+  "note": "47都道府県名を含む求人キーワード検索を実施。全市区町村の個別サイト巡回や、求人の網羅を意味しません。検索で発見できなかった地域を求人ゼロとは扱いません。",
+  "prefectures": [
+    {
+      "prefecture": "北海道",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "青森県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "岩手県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "宮城県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "秋田県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "山形県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "福島県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "茨城県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "栃木県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "群馬県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "埼玉県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "千葉県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "東京都",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "神奈川県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "新潟県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "富山県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "石川県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "福井県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "山梨県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "長野県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "岐阜県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "静岡県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "愛知県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "三重県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "滋賀県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "京都府",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "大阪府",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "兵庫県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "奈良県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "和歌山県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "鳥取県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "島根県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "岡山県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "広島県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "山口県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "徳島県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "香川県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "愛媛県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "高知県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "福岡県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "佐賀県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "長崎県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "熊本県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "大分県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "宮崎県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "鹿児島県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    },
+    {
+      "prefecture": "沖縄県",
+      "method": "web_keyword_search",
+      "state": "searched_not_crawled",
+      "result": "全自治体個別確認ではない"
+    }
+  ],
+  "national_method": "e-Gov・人事院・省庁公式情報・求人の二次掲載を横断検索。中央機関・地方支分部局の全件収集未完了。",
+  "constraints": [
+    "コンテナから外部サイトへのDNS接続が失敗。バッチクローラーの全件実行不可。",
+    "公開サービス連携は組織管理者により無効。公開サイトへの配置・継続更新は未開始。"
+  ],
+  "references": [
+    "https://www.j-lis.go.jp/spd/map-search/cms_1069.html",
+    "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "https://www.jinji.go.jp/saiyo/saiyo/sonota/koubo_joho.html"
+  ]
+}

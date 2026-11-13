@@ -1,0 +1,372 @@
+[
+  {
+    "name": "内閣官房",
+    "pref": "国の機関",
+    "url": "https://www.cas.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": [
+      "https://www.cas.go.jp/jp/saiyou/ninki_index.html"
+    ]
+  },
+  {
+    "name": "内閣法制局",
+    "pref": "国の機関",
+    "url": "https://www.clb.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "人事院",
+    "pref": "国の機関",
+    "url": "https://www.jinji.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "内閣府",
+    "pref": "国の機関",
+    "url": "https://www.cao.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": [
+      "https://www8.cao.go.jp/jinji/saiyo/sonota/index"
+    ]
+  },
+  {
+    "name": "日本学術会議",
+    "pref": "国の機関",
+    "url": "https://www.scj.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "宮内庁",
+    "pref": "国の機関",
+    "url": "https://www.kunaicho.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "公正取引委員会",
+    "pref": "国の機関",
+    "url": "https://www.jftc.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "国家公安委員会",
+    "pref": "国の機関",
+    "url": "https://www.npsc.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "警察庁",
+    "pref": "国の機関",
+    "url": "https://www.npa.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "個人情報保護委員会",
+    "pref": "国の機関",
+    "url": "https://www.ppc.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "カジノ管理委員会",
+    "pref": "国の機関",
+    "url": "https://www.jcrc.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "金融庁",
+    "pref": "国の機関",
+    "url": "https://www.fsa.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "消費者庁",
+    "pref": "国の機関",
+    "url": "https://www.caa.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "こども家庭庁",
+    "pref": "国の機関",
+    "url": "https://www.cfa.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "デジタル庁",
+    "pref": "国の機関",
+    "url": "https://www.digital.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "復興庁",
+    "pref": "国の機関",
+    "url": "https://www.reconstruction.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "総務省",
+    "pref": "国の機関",
+    "url": "https://www.soumu.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "消防庁",
+    "pref": "国の機関",
+    "url": "https://www.fdma.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "法務省",
+    "pref": "国の機関",
+    "url": "https://www.moj.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "検察庁",
+    "pref": "国の機関",
+    "url": "https://www.kensatsu.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "外務省",
+    "pref": "国の機関",
+    "url": "https://www.mofa.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": [
+      "https://www.mofa.go.jp/mofaj/annai/boshu/index.html"
+    ]
+  },
+  {
+    "name": "財務省",
+    "pref": "国の機関",
+    "url": "https://www.mof.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "国税庁",
+    "pref": "国の機関",
+    "url": "https://www.nta.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "国税不服審判所",
+    "pref": "国の機関",
+    "url": "https://www.kfs.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "文部科学省",
+    "pref": "国の機関",
+    "url": "https://www.mext.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "日本学士院",
+    "pref": "国の機関",
+    "url": "https://www.japan-acad.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "地震調査研究推進本部",
+    "pref": "国の機関",
+    "url": "https://www.jishin.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "文化庁",
+    "pref": "国の機関",
+    "url": "https://www.bunka.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "日本芸術院",
+    "pref": "国の機関",
+    "url": "https://www.geijutuin.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "厚生労働省",
+    "pref": "国の機関",
+    "url": "https://www.mhlw.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": [
+      "https://www.mhlw.go.jp/kouseiroudoushou/saiyou/"
+    ]
+  },
+  {
+    "name": "農林水産省",
+    "pref": "国の機関",
+    "url": "https://www.maff.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "林野庁",
+    "pref": "国の機関",
+    "url": "https://www.rinya.maff.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "水産庁",
+    "pref": "国の機関",
+    "url": "https://www.jfa.maff.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "経済産業省",
+    "pref": "国の機関",
+    "url": "https://www.meti.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "資源エネルギー庁",
+    "pref": "国の機関",
+    "url": "https://www.enecho.meti.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "特許庁",
+    "pref": "国の機関",
+    "url": "https://www.jpo.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "中小企業庁",
+    "pref": "国の機関",
+    "url": "https://www.chusho.meti.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "国土交通省",
+    "pref": "国の機関",
+    "url": "https://www.mlit.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "国土地理院",
+    "pref": "国の機関",
+    "url": "https://www.gsi.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "気象庁",
+    "pref": "国の機関",
+    "url": "https://www.jma.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "海上保安庁",
+    "pref": "国の機関",
+    "url": "https://www.kaiho.mlit.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "環境省",
+    "pref": "国の機関",
+    "url": "https://www.env.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": [
+      "https://www.env.go.jp/guide/saiyo/cat_x2/index.html"
+    ]
+  },
+  {
+    "name": "原子力規制委員会",
+    "pref": "国の機関",
+    "url": "https://www.nsr.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "防衛省",
+    "pref": "国の機関",
+    "url": "https://www.mod.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  },
+  {
+    "name": "会計検査院",
+    "pref": "国の機関",
+    "url": "https://www.jbaudit.go.jp/",
+    "kind": "national",
+    "provenance": "https://www.e-gov.go.jp/government-directory/ministries-and-agencies.html",
+    "entrypoints": []
+  }
+]

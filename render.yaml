@@ -1,0 +1,35 @@
+# Creates a PAID web service and persistent disk. Confirm the displayed cost before applying.
+services:
+  - type: web
+    name: civic-pr-jobs
+    runtime: python
+    region: singapore
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT --workers 1
+    healthCheckPath: /healthz
+    disk:
+      name: civic-pr-data
+      mountPath: /var/data
+      sizeGB: 3
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.5
+      - key: DATA_DIR
+        value: /var/data
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: SCHEDULER_ENABLED
+        value: true
+      - key: CRAWL_ON_START
+        value: true
+      - key: DAILY_HOUR_JST
+        value: 5
+      - key: CRAWL_WORKERS
+        value: 4
+      - key: PAGES_PER_SOURCE
+        value: 24
+      - key: REQUEST_DELAY
+        value: 1.5
+      - key: PYTHONUNBUFFERED
+        value: 1

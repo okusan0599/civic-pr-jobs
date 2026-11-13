@@ -1,0 +1,15 @@
+services:
+  civic-pr-jobs:
+    build: .
+    ports:
+      - "127.0.0.1:8765:8000"
+    environment:
+      ADMIN_TOKEN: ${ADMIN_TOKEN:?Set ADMIN_TOKEN in .env first}
+      SCHEDULER_ENABLED: "true"
+      CRAWL_ON_START: "true"
+      DAILY_HOUR_JST: "5"
+    volumes:
+      - civic-pr-data:/var/data
+    restart: unless-stopped
+volumes:
+  civic-pr-data:

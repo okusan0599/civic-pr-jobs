@@ -1,0 +1,14 @@
+{
+  "default_filter": true,
+  "national_filter": true,
+  "national_workplace_filter": true,
+  "public_body_filter": true,
+  "all_records_filter": true,
+  "closed_filter": true,
+  "csv_download": true,
+  "comparison_dialog": true,
+  "details_dialog": true,
+  "coverage_47_regions": true,
+  "mobile_filter": true,
+  "javascript_errors": []
+}
